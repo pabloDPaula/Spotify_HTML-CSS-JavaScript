@@ -1,0 +1,274 @@
+
+* {
+    margin: 0; /*Espaçamento do elemento em relação aos outros elementos*/
+    padding: 0;   /*Espaçamento interno do elemento*/
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+
+html,body{height: 100%;}
+
+.sidebar{
+    float: left;
+    width: 250px;
+    padding: 10px 10px;
+    height: 100%;
+    overflow-y: auto; /*Não cria uma scrool bar no navegador e sim só no componente*/
+    background-color: black;
+    overflow-x: hidden;   /*Esconde a barrinha do scrool bar nesse componente*/
+}
+
+.sidebar-wraper{
+    padding-bottom: 200px; /*Espaçamento dentro do elemento na parte inferior*/
+}
+
+.sidebar-menu{
+    margin: 20px 0;
+    color: rgb(190,190,190);    
+}
+
+.sidebar-logo img{
+    max-width: 250px;  /*Largura maxima da imagem*/
+    width: 100%;
+}
+
+.sidebar-menu a{
+    color: rgb(190,190,190);
+    text-decoration: none;
+    display:block;  
+    padding: 10px 5px;   /*1º Espaçamento inferior e superior -  2º Espaçamento dos lados*/
+}
+
+.sidebar-menu a:hover{
+    color: white;
+}
+.sidebar-menu i{
+    margin: 0 15px;     /* Espaçamento dos icones em relação ao texto*/
+}
+
+.sidebar-menu a.side-bar-menu-selecionado{
+    color: white;  /*Cor do texto*/
+    background-color: rgb(80,80,80);  /*Cor do fundo*/
+    border-radius: 5px; /* Borda curva */
+}
+
+.sidebar-menu-item{
+    margin-top: 12px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    vertical-align: middle;  /*Alinhamento vertical*/
+    padding: 0px 5px; 
+}
+
+.sidebar-menu-item:hover{
+    color: white;
+}
+
+.sidebar-menu-item span{
+    font-weight: 650;
+    font-size:15px;
+}
+
+.sidebar-playlists{
+    padding: 15px 0;
+    border-top: 1px solid rgb(40,40,40);
+}
+
+.sidebar-playlists a{
+    padding-left: 15px;;
+    display: block;
+    color: rgb(190,190,190);
+    text-decoration: none;
+}
+
+.sidebar-playlists a:hover{   /*Ao ser selecionado*/
+   color:white; 
+}
+
+/*Parte principal do app*/
+
+.main{
+    width: calc(100% - 250px);   /*Calcula o restante de espaço de largura que temos para o main fazendo ( tamanho total de largura da página - 250px do sidebar )*/
+    background-color: rgb(18, 18, 18);
+    height: 100%;  /*Altura 100% */
+    float: left;  /*Posiciona e formata o conteúdo*/
+    padding: 15px 50px;
+    overflow-y: auto;
+}
+
+
+img{
+    max-width: 150px;
+    width: 100%;
+}
+
+.main-row{
+    display: flex;  /*Coloca um do lado do outro*/
+    flex-wrap: wrap;  /*Define se os itens flexíveis são forçados a ficarem na mesma linha ou podem ser quebradas em várias linhas  WRAP - faz quebra de linha  */   
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.main-wraper{
+    padding-bottom: 200px;
+}
+
+.main-row-title{
+    width: 100%;   /*Largura do div do título em 100%*/
+}
+
+.main-row-title h2{
+    color: white;
+}
+
+.main-col{
+    cursor: pointer;
+    width: 10%;
+    margin-right: 1%;
+    margin-top: 20px;
+    background-color: rgb(25,25,25);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: left;
+}
+
+.main-col:hover{
+    background-color: rgb(36, 36, 36);
+}
+
+.main-col h3{
+    color: white;
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+.main-col p{
+    color: rgb(189, 184, 184);
+    margin: 8px 0;
+    font-size: 13px;
+    text-align: left;
+}
+
+.player{
+    width: 100%;
+    padding: 20px;
+    height: 90px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    background-color: rgb(30, 30, 30);
+}
+
+.player-artist{
+    width: 20%;
+}
+
+.player-artist img{
+    max-width: 60px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.player-artist h3{
+   display:inline-block;
+   color: white;
+   font-weight: normal;
+   font-size: 20px;
+   vertical-align: middle;
+   margin-left: 10px;
+}
+
+.player-artist h3 > span{
+    color: rgb(200,200,200);
+    font-size: 13px;
+}
+
+.player-control{
+    width: 70%;
+    text-align: center;
+}
+
+.player-control-buttons a{
+    color: white;
+    margin: 8px 10px;
+    font-size: 18px;
+}
+
+.player-control-progress{
+    width: 100%;
+    max-width: 600px;
+    height: 4px;
+    margin-top: 15px;
+    position: relative;   
+    border-radius: 8px;
+    display: inline-block;  /*Para centralizar tudo*/
+    background-color: rgb(80, 80, 80);
+}
+
+.player-control-progress-2{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height:4px;
+    border-radius: 8px;
+    background-color: #b3b3b3;    
+}
+
+.player-control-progress-2:after{               /*After: Cria um pseudo elemento que é ultimo filho do (.player-control-progress-2) para adicionar e melhorar o conteúdo */
+    content: '';
+    display: block;         /*inline fica um do lado do outro e block fica empilhados, como queremos uma bola branca em cima da barra, vamos usar block*/
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    position: absolute;
+    opacity: 0;
+    right: -3px;
+    top: -3px;
+}
+
+.player-control-progress-2:hover{
+    background-color:   #1db954;    
+}
+
+.player-control-progress-2:hover::after{        /*  Ao colocar o mouse em cima da barra de progresso da música que está sendo reproduzida (hover)  */
+    opacity: 1;                                 /*  muda a opacity para 1 do (after) para a bolinha ficar visível                                  */
+}
+
+
+.fa-step-backward, .fa-step-forward,.fa-sync{
+    transform: translateY(-5px); 
+    color: rgb(179, 179, 179);
+    font-size: 15px;
+}
+
+.fa-step-backward:hover,.fa-step-forward:hover,.fa-sync:hover{
+    color: white;
+}
+
+.fa-play-circle:hover, .fa-pause-circle:hover{
+    opacity: 0.7;
+}
+
+
+.minutoAtual{
+    color: rgb(179, 179, 179);
+    display: inline-block;
+    margin-right: 5px;
+    transform:translateY(2px);
+    font-size: 11px;
+}
+
+.minutoTotal{
+    color: rgb(179, 179, 179);
+    display: inline-block;
+    margin-left: 5px;
+    transform:translateY(2px);
+    font-size: 11px;
+}
+
+
+

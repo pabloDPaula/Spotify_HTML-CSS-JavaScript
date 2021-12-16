@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <script src="https://kit.fontawesome.com/a19f048a3e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-wraper">
+            <div class="sidebar-logo">
+                <img src="img/logo.png">
+            </div> 
+            <div class="sidebar-menu">
+                <a class="side-bar-menu-selecionado" href="#"><i class="fas fa-home"></i>Inicio</a>
+                <a href="#"><i class="fas fa-search"></i>Buscar</a>
+                <a href="#"><i class="fas fa-database"></i>Biblioteca</a>
+            </div>
+            <div class="sidebar-menu">
+
+                <div class="sidebar-menu-item">
+                    <i class="far fa-plus-square"></i>
+                    <span>Criar playlist</span>
+                </div>
+
+                <div class="sidebar-menu-item">
+                    <i class="far fa-heart"></i>
+                    <span>Músicas curtidas</span>
+                </div>
+
+                <div class="sidebar-playlists">
+                    <a href="#">Playlist 1</a>
+                    <a href="#">Playlist 2</a>
+                    <a href="#">Playlist 3</a>
+                    <a href="#">Playlist 4</a>
+                    <a href="#">Playlist 5</a>
+                </div>
+                <div class="sidebar-playlists">
+                    <a href="#">Playlist 1</a>
+                    <a href="#">Playlist 2</a>
+                    <a href="#">Playlist 3</a>
+                    <a href="#">Playlist 4</a>
+                    <a href="#">Playlist 5</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main-wraper">   <!-- scroolbar funcional em todos os navegadores-->
+            <div class="main-row"> <!--Linha-->
+                <div class="main-row-title"><h2>Paradas</h2></div>
+                <div class="main-col">
+                    <img src="img/top50brazil.jpg">
+                    <h3>Top 50 - Brasil</h3>
+                    <p>Brasil: Seu relatório diário das faixas mais tocadas no momento</p>
+                </div>
+                <div class="main-col">
+                    <img src="img/top50global.jpg">
+                    <h3>Top 50 - Mundo</h3>
+                    <p>Mundo: Seu relatório diário das faixas mais tocadas no momento</p>
+                </div>
+                <div class="main-col">
+                    <img src="img/top50india.jpg">
+                    <h3>Top 50 - India</h3>
+                    <p>India: Seu relatório diário das faixas mais tocadas no momento</p>
+                </div>
+                <div class="main-col">
+                    <img src="img/top50italy.jpg">
+                    <h3>Top 50 - Itália</h3>
+                    <p>Itália: Seu relatório diário das faixas mais tocadas no momento</p>
+                </div>
+                <div class="main-col">
+                    <img src="img/top50mexico.jpg">
+                    <h3>Top 50 - México</h3>
+                    <p>Méxic: Seu relatório diário das faixas mais tocadas no momento</p>
+                </div>
+                <div class="main-col">
+                    <img src="img/top50usa.jpg">
+                    <h3>Top 50 - EUA</h3>
+                    <p>EUA: Seu relatório diário das faixas mais tocadas no momento</p>
+                </div>
+                <div class="main-col">
+                    <img src="img/top50netherlands.jpg">
+                    <h3>Top 50 - Holanda</h3>
+                    <p>Holanda: Seu relatório diário das faixas mais tocadas no momento</p>
+                </div>
+                <div class="main-col">
+                    <img src="img/top50spain.jpg">
+                    <h3>Top 50 - Espanha</h3>
+                    <p>Espanha: Seu relatório diário das faixas mais tocadas no momento</p>
+                </div>
+                <div class="main-col">
+                    <img src="img/top50norway.jpg">
+                    <h3>Top 50 - Noruega</h3>
+                    <p>Noruega: Seu relatório diário das faixas mais tocadas no momento</p>
+                </div>
+            </div>
+
+            <div class="main-row"> <!--Linha-->
+                <div class="main-row-title"><h2>Minhas músicas</h2></div>
+                <div class="main-col" data-image="img/foofighters.jpg" data-artist="Foo Fighters" data-song="Learn to fly" data-file="assets/learnToFly.mp3">
+                    <img src="img/foofighters.jpg">
+                    <h3>Foo Fighters</h3>
+                    <p>Learn to fly</p>
+                </div>
+                <div class="main-col" data-image="img/bonjovi.jpg" data-artist="Bon Jovi" data-song="It's my life" data-file="assets/itsMyLife.mp3">
+                    <img src="img/bonjovi.jpg">
+                    <h3>Bon Jovi</h3>
+                    <p>It's my life</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="player">
+        <div class="player-artist">
+        </div>
+        <div class="player-control">
+            <div class="player-control-buttons">
+                <a href="" id="voltar"> <i class="fas fa-step-backward"></i></a>
+                <a href="#" id="playBtn"><i class="fas fa-play-circle fa-2x"></i></a>
+                <a href="#" id="pauseBtn" style="display: none;"><i class="fas fa-pause-circle fa-2x fa-solid"></i></a>
+                <a href="" id="avancar"> <i class="fas fa-step-forward"></i></a>
+                <a href="" id="loop"> <i class="fas fa-sync"></i></a>
+            </div>
+            <div class="minutoAtual" id="current-duration">
+                0:00   
+            </div>
+            <div class="player-control-progress">
+                <div style="width: 0%;" class="player-control-progress-2"> 
+                </div>
+            </div>
+            <div class="minutoTotal" id="total-duration">
+                0:00   
+            </div>
+        </div>
+    </div>
+    <audio id="audioplayer" controls="" style="position: absolute; left:0; top: 0; z-index: -999;"></audio>
+    <script src="js/all.min.js"></script>
+    <script>
+        
+        var audioplayer = document.getElementById("audioplayer")
+        var loaded = false;
+        var playBtn = document.getElementById("playBtn")
+        var pauseBtn = document.getElementById("pauseBtn")
+        var barraAudio = document.querySelector(".player-control-progress-2");
+        var avancar = document.getElementById("avancar");
+        var voltar = document.getElementById("voltar");
+        var loop  = document.getElementById("loop");
+        var iconeLoop = document.querySelector(".fa-sync");
+        var currentDuration = document.getElementById("current-duration");
+        var totalDuration = document.getElementById("total-duration");
+
+
+        pauseBtn.addEventListener('click',(e)=>{
+           e.preventDefault();
+            
+            playBtn.style.display = "inline";
+            pauseBtn.style.display = "none";
+            audioplayer.pause();
+
+           return false;
+        })
+
+        playBtn.addEventListener('click',(e)=>{
+           e.preventDefault();
+
+            playBtn.style.display = "none";
+            pauseBtn.style.display = "inline";
+            audioplayer.play();
+
+           return false;
+        })
+
+        loop.addEventListener('click',(e) => {
+            e.preventDefault();
+
+            if(audioplayer.loop){
+                iconeLoop.style.color = "rgb(179, 179, 179)";
+                audioplayer.loop = false;
+            }else{
+                iconeLoop.style.color = "white";
+                audioplayer.loop = true;
+            
+            }
+
+        })
+
+        avancar.addEventListener('click',(e)=>{
+            e.preventDefault();
+
+            audioplayer.currentTime += 10;
+
+        })
+
+        voltar.addEventListener('click',(e)=>{
+            e.preventDefault();
+
+            audioplayer.currentTime -= 10;
+
+        })
+
+
+        const playSong = (file) => {
+            if(loaded == false){
+                audioplayer.innerHTML = '<source src="'+file+'" type="audio/mp3"/>';
+                loaded = true;
+            }
+
+            audioplayer.src = file;
+            audioplayer.play();
+            playBtn.style.display = "none";
+            pauseBtn.style.display = "inline";
+        }
+
+        document.querySelectorAll('.main-col').forEach(item => {
+            item.addEventListener('click',event=>{
+               let image = item.getAttribute('data-image');
+               let artist = item.getAttribute('data-artist');
+               let song = item.getAttribute('data-song');
+               let file = item.getAttribute('data-file');
+
+               barraAudio.style.width = 0+'%';
+               let playerArtistComponent = document.getElementsByClassName('player-artist');
+               playerArtistComponent[0].innerHTML = '<img src="'+image+'"/> <h3>'+artist+'<br/><span>'+song+'</span></h3>';
+
+               playSong(file);
+               
+            });
+        });
+
+        audioplayer.ontimeupdate = () => {
+            var audioAtual = (audioplayer.currentTime / audioplayer.duration) * 100+'%';
+            barraAudio.style.width = audioAtual;
+
+            currentDuration.innerText = segundosParaMinutos(audioplayer.currentTime);
+            if(!isNaN(audioplayer.duration)){
+                totalDuration.innerText = segundosParaMinutos(audioplayer.duration);
+            }
+        }
+        //utlizar setinterval a cada segundo e atualizar a barra de progresso 
+        //(segundo atual / segundo total) * 100
+
+        function segundosParaMinutos(time){
+            const minuto = Math.floor(time/60);
+            const segundos  = Math.floor(time%60);
+
+            var tempo = minuto+":"+("0"+segundos).slice(-2);
+            return tempo;    //slide pega os 2 ultimos numeros exemplo: 452222001 pega só o 01
+        }
+
+    </script>
+</body>
+</html>
